@@ -20,7 +20,13 @@ section{
     background-color: white;
     padding:1em;
 }
+footer{
+    margin-top: 1em;
+}
 
+header{
+    margin-bottom: 1em;
+}
 @media screen and (min-width: 500px) {
     main {
         grid-template-columns: 1fr 1fr;
@@ -28,6 +34,6 @@ section{
 
     header {
         background-color: black;
-        font:white;
+        color:white;
     }
 }
