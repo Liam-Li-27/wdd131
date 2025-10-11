@@ -20,25 +20,35 @@ function toggleMenu() {
     }
 }
 
-const menuItems = document.querySelectorAll(".menu a");
-menuItems.forEach(item => {
-    item.addEventListener("click", (e) => {
-  
-        if (window.innerWidth < 1024) {
-            e.preventDefault(); 
-            setTimeout(() => {
-                closeMenu();
-                console.log("Navigating to:", item.getAttribute("href"));
-            }, 300);
-        }
-    });
-});
+function handleResize(){
+    if (window.innerWidth > 1000){
+        menu.classList.remove('hide')
+    }else{
+        menu.classList.add('hide')
+    }
+}
+handleResize();
+window.addEventListener('resize',handleResize)
 
+/* Modal */
 
+const gallery = document.querySelector('.pictures')
+const modal = document.querySelector('dialog')
+const modalImage = modal.querySelector('img')
+const closeButton = document.querySelector('.close-viewer')
 
-function closeMenu() {
-    menu.classList.remove("show");
-    menuToggle.classList.remove("active");
-    menuToggle.innerHTML = "☰";
+gallery.addEventListener('click',function(e){
+    if(e.target.tagName ==='IMG'){
+        openModal(e)
+    }
+})
+
+function openModal(e){
+    modalImage.src=e.target.src
+    modalImage.alt=e.target.alt
+    modal.showModal()
 }
 
+closeButton.addEventListener('click', ()=>{
+    modal.close()
+})
