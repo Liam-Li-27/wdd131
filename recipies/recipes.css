@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+ :root {
+ --primary-color: #1B98E0;
+ --secondary-color: #59c3c3;
+ --text-dark: #333;
+ --text-light: #ebebeb;
+ --secondary-font: "Amatic SC", sans-serif;
+ }
+.logo img{
+    width: 12%;
+}
+.logo{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.searchingContainer{
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    justify-items: center;
+    align-items: center;
+    margin: 40px 20px;
+}
+
+#searchingBar {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: solid 2px black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.searchingContainer button{
+    height: 100%;
+    width: 100%;
+    border: solid 2px black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.searchingContainer img{
+    width: 100%;
+
+}
+
+header{
+    border-bottom: solid 2px rgba(0, 0, 0, 0.462);
+}
+
+.imageCard{
+    border: solid 3px rgba(0, 0, 0, 0.524);
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    gap: 50px; 
+}
+
+.starts{
+    margin: 50px auto;
+}
+
+.text h2{
+    color:#1B98E0;
+    font-size: 5em;
+    font-family: var(--secondary-font);
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.tag{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 150px;
+}
+
+.tag span{
+    border: solid 2px rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img{
+    width:40px;
+}
+.social{
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+
+.authorLink a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 20px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .text p{
+        display: none
+    }
+    
+    .imageCard{
+    border: solid 3px rgba(0, 0, 0, 0.524);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column
+    }
+
+    footer{
+    display: flex;
+    flex-direction: column
+}
+};
