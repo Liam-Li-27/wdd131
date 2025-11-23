@@ -11,82 +11,55 @@
     <meta name="twitter:card" content="summary_large_image">
     <title>Document</title>
     <link rel="stylesheet" href="recipes.css">
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
 </head>
 <body>
     <header>
-
         <div class="logo">
-        <img src="images/recipe-book.png">
-        <h1>Recipe Book</h1>
+            <img src="images/recipe-book.png">
+            <h1>Recipe Book</h1>
         </div>
-
         <div class="searchingContainer">
-
-        <input type="text" id="searchingBar" name="searchingBar" placeholder="  Find a recipe!">
-
-
-        <button><img src="images/search.svg"></button>
-
+            <input type="text" id="searchingBar" name="searchingBar" placeholder="  Find a recipe!">
+            <button><img src="images/search.svg"></button>
         </div>
-
-        
-
     </header>
 
     <main>
-        <section class="imageCard">
-        
-        <img src="images/apple-crisp.jpg" alt="apple-crisp">
-        
-
-        <div class="text">
-            <div class="tag">
-                <span>dessert</span>
-                <span>snack</span>
-            </div>
-
-            <div class="starts">
-
-                <h2>Apple Crisp</h2>
-
-                <span
-	     class="rating"
-	      role="img"
-	       aria-label="Rating: 4 out of 5 stars">
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">☆</span>
-            </span>
-
-            </div>
-
-            <div>
-                <p>
+        <figure class="recipe">
+            <img src="images/apple-crisp.jpg" alt="image of apple crisp on a plate" />
+            <figcaption>
+                <ul class="recipe__tags">
+                    <li>dessert</li>
+                    <li>snack</li>
+                </ul>
+                <h2><a href="#">Apple Crisp</a></h2>
+                <p class="recipe__ratings">
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                </p>
+                <p class="recipe__description">
                     This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.
                 </p>
-            </div>
-
-        </div>
-        </section>
-
-
+            </figcaption>
+        </figure>
     </main>
 
     <footer>
         <div class="social">
-	    <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
-	    <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-	    <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-	    <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
         </div>
-
         <div class="authorLink">
-        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a> 
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a> 
         </div>
     </footer>
-    
 </body>
 </html>
