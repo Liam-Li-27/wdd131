@@ -113,3 +113,28 @@ console.log(searchHikes(hikes, "yellowstone"));
 console.log(searchHikes(hikes, "moderate"));
 console.log(searchHikes(hikes, "al"));
 
+
+
+
+
+
+localStorage.setItem('username', 'JohnDoe');
+
+const username = localStorage.getItem('username');
+console.log(`Welcome back, ${username}!`);
+
+localStorage.setItem('hikes', JSON.stringify(hikes));
+const hikesFrmStorage = localStorage.getItem('hikes');
+
+console.log(hikesFrmStorage);
+
+function setLocalStorage(key, value) {
+  const valueStr = JSON.stringify(value);
+  localStorage.setItem(key, valueStr);
+}
+
+function getLocalStorage(key) {
+  const value = localStorage.getItem(key)
+  const valueAsString = JSON.parse(value);
+  return valueAsString;
+}

@@ -20,8 +20,14 @@ button img{
     border: none;
     position: absolute;
     top: 0px;
+    left: 0px;
+    z-index: 3;
 }
 
+.logo{
+    display: flex;
+    justify-self: center;
+}
 
 body{
     background-color: black;
@@ -32,37 +38,39 @@ main{
 }
 
 header {
+    display: grid;
+    place-items: center;
+    height: 820px;
     position: relative;
-    height: 820px;  
+    overflow: hidden; 
 }
 
 
 
 #bg-video{
-    max-width:100%;
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 
 h1{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-top: 100px;
-    font-size: 50px;
+    z-index: 2;
+    color:white;
+    font-size: 80px;
+    font-size: clamp(30px, 8vw, 80px);
+    
 }
 
-button.clickhere{
-    position: absolute;
-    border-radius: 12px;
-    padding: 10px 10px;
-    top:700px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: aliceblue;
+.clickhere{
+    z-index: 2;
+    margin-top: 300px; 
+    padding: 10px;
+    border-radius: 10px;
 }
 
 button.clickhere a{
@@ -114,14 +122,10 @@ button.clickhere a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin-top: 200px;
 }
 
-.content_card1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
 
 .content_card1 .card_img1{
     width: 50%;
@@ -280,4 +284,90 @@ footer img{
     .content_card2:hover .card_img2{
         transform: translateX(0);
     }
+}
+
+
+#payingwindow{
+    border: rgba(128, 128, 128, 0.435) 2px solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 600px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px;
+}
+
+#payingwindow input{
+    border: solid rgba(128, 128, 128, 0.435) 2px;
+    border-radius: 10px;
+    width: 250px;
+    height: 40px
+}
+
+
+.ticketh{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#tickets main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+#tickets footer{
+    margin-top: 0px;
+}
+
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.hide{
+    display: none;
+}
+
+select{
+    display: block;
+    height: 40px;
+    border-radius: 10px;
+}
+.submit_button{
+    height: 30px;
+    border: grey 2px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.group #month{
+    width: 20%;
+}
+
+.group #year{
+    width: 20%;
+}
+
+.fixed-back {
+    position: fixed;      
+    top: 20px;           
+    left: 20px;            
+    padding: 10px 15px;    
+    background-color: #e2e2e2; 
+    color: black;        
+    text-decoration: none;
+    border-radius: 5px;   
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 9999; 
+}
+.fixed-back:hover {
+    transform: scale(1.05); /* 悬停轻微放大 */
 }

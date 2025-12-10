@@ -6,16 +6,32 @@
     <title>Ticket buying window</title>
     <meta name="author" content="Zehao Li">
     <link rel="stylesheet" href="../final_project.css">
+    <script src="../main.js" type=module defer></script>
 </head>
-<body>
-    <header>
+<body id="tickets">
+    <header class="ticketh">
         <h1>Booking the Ticket!</h1>
+        <a href="../index.html" class="fixed-back">Back Home</a>
     </header>
 
     <main>
-        <input type="text" placeholder="  Your Name...">
-        <input type="text" placeholder="  Your Email...">
-        <input type="text" placeholder="  Number of Tickets..."> 
+
+        <section id="payingwindow">
+        <label>
+        Enter your name
+        <input type="text"  name="name" placeholder="  Your Name...">
+        </label>
+
+        <label>
+        Enter your email
+        <input type="text"  name="email"  placeholder="  Your Email...">
+        </label>
+
+        <label>
+        Enter the number of tickets you want to buy
+        <input type="text"  name="number" placeholder="  Number of Tickets..."> 
+        </label>
+        
         <select>
             <option value="" disabled selected>Select your campsite</option>
             <option value="campsite1">Lakeside Retreat</option> 
@@ -25,20 +41,98 @@
             <option value="campsite5">Desert Oasis Camp</option> 
         </select>
 
-        <select>
+        <select id="payment">
             <option value="" disabled selected>Select payment method</option>
-            <option value="creditcard">Credit Card</option> \
-            <option value="paypal">PayPal</option> \  
+            <option value="creditcard">Credit Card</option>
+            <option value="paypal">PayPal</option> 
         </select>
 
-        <div>
-        <input type ='number' placeholder="  Card Number...">
-        <input type ='number' placeholder="  CVV...">
-        </div> 
+
+
+        <section class="debitcard hide">
+
+            <div class="cardnumber">
+                <div>
+                <label>CARD NUMBER:</label>
+                </div>
+                <input
+                type="number"
+                name="cardnumber"
+                id="cardnumber"
+                pattern="[0-9]{16}"
+                placeholder="1234 5678 9012 3456"
+                required
+                >
+            </div> 
+            <div class="cardholder">
+            <div>
+                <label> CARD HOLDER:</label>
+            </div>
+                <input
+                type="text"
+                name="cardholder"
+                id="cardholder"
+                placeholder="John Doe"
+                required>
+            </div>
+
+            <div class="date">
+            <div>
+                <label>Expiration</label>
+                </div>
+            <div class="group">
+                <input
+                type="text"
+                name="month"
+                id="month"
+                placeholder="MM"
+                required>
+                
+                <input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="YY"
+                required>
+            </div>
+
+            <div class="cvvinfor">
+                <div>
+                    <label>CVC/CVV</label>
+                </div>
+
+                <div>
+                    <input
+                    type="number"
+                    id="cvvnumber"
+                    name="cvvnumber"
+                    required
+                    pattern="[0-9]{3}"
+                    placeholder="xxx">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="paypal hide">
+            <div class="paypalname">
+                <div>
+                    <label>PayPale user name</label>
+                </div>
+
+                <input type="text" name="paypalid" placeholder="Liam@byui...">
+        
+            </div>
+        </section>
+
+        
 
 
 
         <button class="submit_button">Submit</button>
+
+        </section>
     </main>
 
     <footer>
